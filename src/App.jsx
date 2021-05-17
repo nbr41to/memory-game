@@ -40,40 +40,42 @@ const App = () => {
     setPieces([...pieces.slice(1), createPiece()]);
   };
   return (
-    <Box toCenterX column px4 w='100%' h='100vh'>
-      <Box textXL my2>★Memory Game★</Box>
-      {!isStarted ?
-        <Box w='100%' h='100%' column>
-          <Box as='img' my20 mx4 src={brain} alt="脳" />
-          <Box w='100%' toBetween mb3>
-            <Button label='Level1' textLG px4 h16 bgRed400={level === 1} onClick={() => setLevel(1)} />
-            <Button label='Level2' textLG px4 h16 bgRed400={level === 2} onClick={() => setLevel(2)} />
-            <Button label='Level3' textLG px4 h16 bgRed400={level === 3} onClick={() => setLevel(3)} />
-          </Box>
-          <Box w='100%' mb8>
-            <Button label='START' textXL px4 h16 bgCyan400 onClick={start} />
-          </Box>
-        </Box>
-        :
-        <Box w={375} px4>
-          <Box flex flexDirection="column-reverse">
-            {pieces.map((piece, index) => <Block piece={piece} hidden={!piece.initial && index < level} />)}
-          </Box>
-          <Box w='100%' bgGray400 h1 my4></Box>
-          <Box w="100%" toBetween>
-            {pieceCharactor[0].map(char => <Button key={char} label={char} square-80 mx1 textXL onClick={() => solve(char, 'left')} />)}
-            {pieceCharactor[1].map(char => <Button key={char} label={char} square-80 mx1 textXL onClick={() => solve(char, 'right')} />)}
-          </Box>
-          <Box my4 toCenterX >
-            <Box textXL fontBold w="100%" toCenter>
-              solve: {totalSolve}
+    <Box toCenter w='100%' h='100vh'>
+      <Box toCenterX column px4 maxW={375} w='100%'>
+        <Box textXL my2>★Memory Game★</Box>
+        {!isStarted ?
+          <Box w='100%' h='100%' column>
+            <Box as='img' my20 mx4 src={brain} alt="脳" />
+            <Box w='100%' toBetween mb3>
+              <Button label='Level1' textLG px4 h16 bgRed400={level === 1} onClick={() => setLevel(1)} />
+              <Button label='Level2' textLG px4 h16 bgRed400={level === 2} onClick={() => setLevel(2)} />
+              <Button label='Level3' textLG px4 h16 bgRed400={level === 3} onClick={() => setLevel(3)} />
             </Box>
-            <Box textXL fontBold w="100%" toCenter>
-              combo: {combo}
+            <Box w='100%' mb8>
+              <Button label='START' textXL px4 h16 bgCyan400 onClick={start} />
             </Box>
           </Box>
-        </Box>
-      }
+          :
+          <Box w={375} px4>
+            <Box flex flexDirection="column-reverse">
+              {pieces.map((piece, index) => <Block piece={piece} hidden={!piece.initial && index < level} />)}
+            </Box>
+            <Box w='100%' bgGray400 h1 my4></Box>
+            <Box w="100%" toBetween>
+              {pieceCharactor[0].map(char => <Button key={char} label={char} square-80 mx1 textXL onClick={() => solve(char, 'left')} />)}
+              {pieceCharactor[1].map(char => <Button key={char} label={char} square-80 mx1 textXL onClick={() => solve(char, 'right')} />)}
+            </Box>
+            <Box my4 toCenterX >
+              <Box textXL fontBold w="100%" toCenter>
+                solve: {totalSolve}
+              </Box>
+              <Box textXL fontBold w="100%" toCenter>
+                combo: {combo}
+              </Box>
+            </Box>
+          </Box>
+        }
+      </Box>
     </Box>
   );
 };
