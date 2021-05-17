@@ -42,7 +42,7 @@ const App = () => {
   return (
     <Box toCenter w='100%' h='100vh'>
       <Box toCenterX column px4 maxW={375} w='100%'>
-        <Box textXL my2>★Memory Game★</Box>
+        <Box textXL my2>★ Memory Game ★</Box>
         {!isStarted ?
           <Box w='100%' h='100%' column>
             <Box as='img' my20 mx4 src={brain} alt="脳" />
