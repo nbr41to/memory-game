@@ -6,4 +6,4 @@
 
 ## play
 
-https://github.com/nbr41to/memory-game
+https://memory-game-sage.vercel.app/
