@@ -1,5 +1,7 @@
 # Memory Game
 
+![](./src/assets/preview.png)
+
 ## use
 
 - [Fower](https://fower.vercel.app/)
