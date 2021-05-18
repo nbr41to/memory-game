@@ -1,13 +1,13 @@
 import { Box } from '@fower/react';
+import styled from 'styled-components';
 
 const BaseBlock = ({ children, ...props }) => (
   <Box
     w='50%'
-    textXL
+    textLG
     fontBold
     white
-    h='8vh'
-    maxH={70}
+    h={50}
     toCenter
     shadowMD
     {...props}
@@ -38,3 +38,6 @@ export const Block = ({ piece, hidden }) => {
     </Box>
   );
 };
+
+const StyledBox = styled(BaseBlock)`
+`;

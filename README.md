@@ -9,3 +9,8 @@
 ## play
 
 https://memory-game-sage.vercel.app/
+
+## update
+
+- タイム
+- 終了ボタン
