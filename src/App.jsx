@@ -105,7 +105,7 @@ const App = () => {
             </Box>
             <Box toCenter textLG fontBold mt2>LIFE: {life()}</Box>
             <Box absolute top2 right2>
-              <Button label='✕' textL rounded={0} circle-60 bgGray400 onClick={end} />
+              <Button label='✕' textL bgGray400 onClick={end} />
             </Box>
           </Box>
         }
