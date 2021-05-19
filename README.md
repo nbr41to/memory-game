@@ -2,14 +2,10 @@
 
 ![](./src/assets/preview.png)
 
-## use
-
-- [Fower](https://fower.vercel.app/)
-
-## play
+## playing
 
 https://memory-game-nbr41to.vercel.app/
 
-## update
+## used
 
-- タイム制
+- [Fower](https://fower.vercel.app/)
