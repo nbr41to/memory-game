@@ -8,7 +8,7 @@
 
 ## play
 
-https://memory-game-sage.vercel.app/
+https://memory-game-nbr41to.vercel.app/
 
 ## update
 
