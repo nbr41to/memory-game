@@ -38,6 +38,3 @@ export const Block = ({ piece, hidden }) => {
     </Box>
   );
 };
-
-const StyledBox = styled(BaseBlock)`
-`;
